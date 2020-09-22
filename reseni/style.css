@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*
+    background image: https://picsum.photos/1200/300
+    primary color: hsla(160, 50%, 50%, 1);
+
+*/
+
+
+/* barevné schéma prostřednictvím CSS proměnných */
+:root {
+    --primary-hue: 160;
+    --primary: hsla(var(--primary-hue),50%,50%,1);
+    --primary-dark: hsla(var(--primary-hue),100%,10%,1);
+    --primary-light: hsla(var(--primary-hue),50%,50%,0.6);
+}
+
+body {
+    max-width: 80em;
+    margin: 0 auto; /* centrování blokových prvků */
+    font-family: sans-serif;
+}
+
+header {
+    min-height: 300px; /* aby byl obrázek na pozadí pěkně vidět */
+    padding: 2rem 3rem;
+    background-image: url('https://picsum.photos/1200/300');
+    background-size: cover; /* roztáhne obrázek tak aby pokrýval celý prvek */
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    background-color: var(--primary-light);
+}
+
+main>img {
+    display: block;
+    max-width: 100%; /* aby nepřetékal přes pravý okraj stránky */
+    height: auto; /* zachovej poměr stran */
+    margin: 1rem auto;
+}
+
+h2,
+h3 {
+    color: var(--primary-dark);
+}
+
+h3 {
+    clear: both; /* zastav plavání na obou stranách */
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 3rem;
+    text-shadow: 0 0 6px var(--primary-dark);
+}
+
+nav ul {
+    padding-left: 0; /* vynuluj výchozí padding, místo pro odrážky */
+}
+
+nav li {
+    display: inline; /* změň výchozí, aby se seřadily vedle sebe */
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* svislé a vodorovné vnitřní odsazení */
+    background-color: var(--primary-light);
+    border: 3px solid var(--primary-dark);
+    border-radius: 0.25rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* vzhled odkazu při najetí myši */
+nav a:hover {
+    background-color: var(--primary-dark);
+    color: var(--primary);
+}
+
+section {
+    display: flow-root; /* zamezí přeteční obrázků přes spodní okraj */
+    padding:  1rem;
+    border-bottom: 1px dotted var(--primary-dark);
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
+
+/* sekce, která je posledním potomkem svého rodiče = není za ní další prvek (v témže rodiči) */
+section:nth-child(even) {
+    background-color: var(--primary);
+}
+
+/* sudé sekce */
+section:nth-child(even) {
+    background-color: var(--primary);
+}
+
+section img {
+    width: 175px;
+    height: auto; /* zachovej poměr stran */
+}
+
+/* obrázky v lichých sekcích */
+section:nth-child(odd) img {
+    float: left;
+    margin-right: 1rem;
+}
+
+/* obrázky v sudých sekcích */
+section:nth-child(even) img {
+    float: right;
+    margin-left: 1rem;
+}
