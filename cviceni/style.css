@@ -8,6 +8,38 @@ html {
     box-sizing: inherit;
 }
 
+section img {
+    width: 250px;
+    height: 400px;
+}
+nav {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    background-color: #4599; 
+}
+nav a {
+    color:thistle;
+    text-decoration: none;
+    padding: 10px;
+}
+
+}
+h1 {
+    font-size: 35pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:thistle;
+}
+header {
+    background-image: url(https://picsum.photos/1200/300);
+    min-height: 200px;
+    padding: 50px 10px;
+    margin: -10px;
+    text-align: center;
+}
+
 /*
     background image: https://picsum.photos/1200/300
     primary color: hsla(160, 50%, 50%, 1);
