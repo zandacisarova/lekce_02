@@ -14,36 +14,80 @@ body {
     margin:auto;
     
 }
+:root {
+    --primary: #40bf95;
+    --spacer: 1rem;
+    --primary-hue: 160;
+    --primary: hsla(var(--primary-hue),50%,50%,1);
+    --primary-dark: hsla(var(--primary-hue),100%,10%,1);
+    --primary-light: hsla(var(--primary-hue),50%,50%,0.6);
+}
+p {
+    padding-left: calc(var(--spacer)*3);
+    color: hsla(var(--primary-hue),100%,10%,1);;
+}
+img {
+    padding-left: calc(var(--spacer)*1);
+    padding-right: calc(var(--spacer)*1);
+    margin-bottom: var(--spacer);
+}
 section img {
     width: 175px;
     height: 400px;
     float: left;
-    margin: 20px;
+    margin: var(--spacer);
+    margin-left: calc(var(--spacer)*0.2);
     
 }
 section {
     background-color: hsla(160, 50%, 50%, 1);
     border-bottom: dotted #003322;
-    margin-right: -3rem;
+    margin-right: var(--spacer);
+    margin-left: var(--spacer);
     display: flow-root;
-    padding-right: 20px;
-
-    
+    padding-right: calc(var(--spacer) * 3);
+    padding-left: var(--spacer);
+    text-align: justify;
     
 }
+section:last-child {
+    border:unset;
+}
+
 nav {
     text-align: center;
+    
 }
 
 nav li {
     display: inline-block;
-    background-color: #4599; 
+    background-color: hsla(var(--primary-hue),50%,50%,0.6);
+    border: 5px solid hsla(var(--primary-hue),100%,10%,1);
+    border-right: none; 
+    border-top: none;
+    height:calc(var(--spacer)*3);
+    
+    
+    
+    
 }
+
+nav li:hover {
+    background-color: hsla(228, 38%, 43%, 0.6);
+    
+}
+
 nav a {
-    color:thistle;
+    color: hsla(var(--primary-hue),100%,10%,1);
     text-decoration: none;
-    padding: 10px;
+    padding: var(--spacer);
+    
+    
 }
+nav a:hover {
+    color:var(--primary);
+}
+
 a:focus {
     color:darkmagenta;
 }
@@ -51,29 +95,41 @@ a:focus {
 h1 {
     font-size: 35pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: thistle;
+    color: var(--primary);
+    text-shadow: -2px 2px 0 hsla(var(--primary-hue),100%,10%,1);
+    
 }
 
 header {
     background-image: url(https://picsum.photos/1200/300) ;
     min-height: 300px;
-    padding: 50px 10px;
+    padding: var(--spacer);
     text-align: center;
 }
 
 main {
-    background-color:  #4599;
-    padding: 50px;
-
+    background-color:  hsla(228, 38%, 43%, 0.6);
+    padding: var(--spacer);
+    padding-bottom:unset;
 }
+h2 {
+    padding-left: calc(var(--spacer)*3);
+    color: hsla(var(--primary-hue),100%,10%,1);
+}
+
 main img {
     max-width: 100%;
     height: auto;
 }
 h3 {
     clear: both;
-    margin-left: 10px;
-    padding-top: 10px;
+    margin-left: var(--spacer);
+    padding-top: var(--spacer);
+    color: hsla(var(--primary-hue),100%,10%,1);
+}
+section:first-child img {
+    float:right;
+    
 }
 /*
     background image: https://picsum.photos/1200/300
