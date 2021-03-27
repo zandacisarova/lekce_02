@@ -7,10 +7,29 @@ html {
 *::after {
     box-sizing: inherit;
 }
-
+body {
+    
+    max-width: 800px;
+    
+    margin:auto;
+    
+}
 section img {
-    width: 250px;
+    width: 175px;
     height: 400px;
+    float: left;
+    margin: 20px;
+    
+}
+section {
+    background-color: hsla(160, 50%, 50%, 1);
+    border-bottom: dotted #003322;
+    margin-right: -3rem;
+    display: flow-root;
+    padding-right: 20px;
+
+    
+    
 }
 nav {
     text-align: center;
@@ -25,21 +44,37 @@ nav a {
     text-decoration: none;
     padding: 10px;
 }
-
+a:focus {
+    color:darkmagenta;
 }
+
 h1 {
     font-size: 35pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:thistle;
+    color: thistle;
 }
+
 header {
-    background-image: url(https://picsum.photos/1200/300);
-    min-height: 200px;
+    background-image: url(https://picsum.photos/1200/300) ;
+    min-height: 300px;
     padding: 50px 10px;
-    margin: -10px;
     text-align: center;
 }
 
+main {
+    background-color:  #4599;
+    padding: 50px;
+
+}
+main img {
+    max-width: 100%;
+    height: auto;
+}
+h3 {
+    clear: both;
+    margin-left: 10px;
+    padding-top: 10px;
+}
 /*
     background image: https://picsum.photos/1200/300
     primary color: hsla(160, 50%, 50%, 1);
